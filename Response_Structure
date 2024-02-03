@@ -1,0 +1,11 @@
+const isJson = {
+  "properties": {
+    "alpha": {
+      "type": "boolean"
+    }
+  }
+};
+
+pm.test('Response structure is Json', function() {
+  pm.response.to.have.jsonSchema(isJson);
+});
